@@ -2,7 +2,7 @@ import { Globe2, ShoppingBag } from 'lucide-react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useCart } from '../cart/cart'
 import { copy } from '../data/copy'
-import { contactPath, homePath, productsPath, switchLocalePath } from '../lib/routes'
+import { blogPath, contactPath, homePath, productsPath, promotionsPath, switchLocalePath } from '../lib/routes'
 import type { Locale } from '../types'
 
 type HeaderProps = {
@@ -18,6 +18,8 @@ export function Header({ locale, onCartOpen }: HeaderProps) {
   const navItems = [
     { to: homePath(locale), label: text.nav.home, end: true },
     { to: productsPath(locale), label: text.nav.products, end: false },
+    { to: blogPath(locale), label: text.nav.blog, end: false },
+    { to: promotionsPath(locale), label: text.nav.promotions, end: false },
     { to: contactPath(locale), label: text.nav.contact, end: false },
   ]
 

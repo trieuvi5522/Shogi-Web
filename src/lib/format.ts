@@ -5,3 +5,11 @@ export function formatVnd(value: number) {
     maximumFractionDigits: 0,
   }).format(value)
 }
+
+export function formatDate(value: string, locale: 'vi' | 'en') {
+  return new Intl.DateTimeFormat(locale === 'vi' ? 'vi-VN' : 'en-US', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(value))
+}

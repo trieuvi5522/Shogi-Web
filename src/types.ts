@@ -31,3 +31,30 @@ export type CartItem = {
   productId: string
   quantity: number
 }
+
+export type TimelineKind = 'blog' | 'promotion'
+
+export type TimelineContent = {
+  title: string
+  excerpt: string
+  body: string[]
+  details?: string[]
+  terms?: string[]
+  ctaLabel?: string
+}
+
+export type TimelineItem = {
+  id: string
+  kind: TimelineKind
+  slug: string
+  date: string
+  ctaTarget?: 'products' | 'contact'
+  visual: {
+    mark: string
+    tone: string
+    toneDark: string
+    accent: string
+  }
+  vi: TimelineContent
+  en: TimelineContent
+}
