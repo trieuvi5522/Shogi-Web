@@ -41,6 +41,16 @@ export type TimelineContent = {
   details?: string[]
   terms?: string[]
   ctaLabel?: string
+  category?: string
+  author?: string
+  readTime?: string
+  seoTitle?: string
+  seoDescription?: string
+  eventLabel?: string
+  eventDate?: string
+  eventTime?: string
+  eventLocation?: string
+  eventStatus?: string
 }
 
 export type TimelineItem = {
